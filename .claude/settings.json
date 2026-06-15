@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(taskkill /PID 12996 /F 2>$null; Start-Sleep -Seconds 1; $c = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue; if \\($c\\) { \"3000 still in use by $\\($c.OwningProcess\\)\" } else { \"port 3000 free\" }; $c2 = Get-NetTCPConnection -LocalPort 3001 -State Listen -ErrorAction SilentlyContinue; if \\($c2\\) { \"3001 in use by $\\($c2.OwningProcess\\)\" } else { \"port 3001 free\" })"
+    ]
+  }
+}
